@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head th:fragment="head">
+        <title>Plantilla</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+        <link rel="stylesheet" th:href="@{/webjars/font-awesome/css/all.css}"/>
+    </head>   
+    <body class="p-3 mb-2 bg-secondary text-white">
+      
+            <header th:fragment="header">          
+                <h1 th:text="#{plantilla.titulo}">Titulo</h1>
+            </header>
+
+            <footer th:fragment="footer">
+                <div>
+                    <br/>
+                    <a th:href="@{/(lang=es)}">ES</a> |
+                    <a th:href="@{/(lang=en)}">EN</a> |
+                    <!-- [[#{ }] ] traigo lo  que está en el messages.properties. 
+                       si lo pongo como #{plantilla..pie-pagina} no me muestra lo que hay dentro de la etiqueta "a" en este caso -->
+                    <span> [[#{plantilla.pie-pagina}]] <a href="http://www.globalmentoring.com.mx" target="_blank">GlobalMentoring.com.mx</a></span>
+                </div>
+            </footer>       
+    </body>
+</html>

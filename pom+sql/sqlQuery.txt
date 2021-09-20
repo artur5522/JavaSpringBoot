@@ -1,0 +1,12 @@
+DROP DATABASE IF EXISTS spring;
+CREATE DATABASE IF NOT EXISTS spring;
+DROP TABLE IF EXISTS person;
+CREATE TABLE `person` (
+  `id_persona` int NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(45) DEFAULT NULL,
+  `apellido` varchar(45) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  `telefono` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id_persona`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+insert into person (nombre, apellido, email, telefono) values ("mark","johnson","marj@mail.com","555222"),("john","markson","johnm@mail.com","222555");
